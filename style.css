@@ -24,6 +24,10 @@ body{
     font-size: 15px;
     font-style: italic;
 }
+.inner-container{
+    display: flex;
+    justify-content: space-between;
+}
 .container .text-input{
     color: #008000;
     width: 100%;
@@ -39,9 +43,9 @@ body{
     border: 2px solid #000;
 }
 .clear{
-    position: absolute;
+    /* position: absolute;
     right: 30px;
-    bottom: 70px;
+    bottom: 70px; */
     outline: none;
     border: none;
     color: #fff;

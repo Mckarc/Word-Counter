@@ -21,19 +21,25 @@ const textInput = document.querySelector(".text-input");
 const wordCountElement = document.querySelector(".word-count");
 const letterCountElement = document.querySelector(".letter-count");
 const spaceCountElement = document.querySelector(".space-count");
+const clearAll = document.querySelector(".clear");
 const textArea = document.querySelector("#chat");
 const type = document.querySelector("#count");
-	
-	textArea.addEventListener('keyup', () => {
+
+
+textArea.addEventListener('keyup', () => {
 	const textInput = textArea.value;
 	let count = "You are typing..."; 
 	type.textContent = count;
 	if (textInput == "") {
-
-        
 		type.textContent = "";
 	}
 });
+
+clearAll.addEventListener('click', () => {
+     textArea.value = ""; 
+});
+
+
 textInput.addEventListener("input", () =>{
     const splitted = textInput.value.trim().split(/[\s-]/);
     const letterCount = (textInput.value.match(/[a-z]/gi) || []).length;
